@@ -1,0 +1,9 @@
+const String OnBoardingTitle_1 = "Find Your Perfect Home";
+const String OnBoardingSubtitle_1 = "Find about modern homes for sale, affordable apartments for rent, neighbourhood insights and market trends";
+const String OnBoardingCounter_1 = "1/3";
+const String OnBoardingTitle_2 = "Chat With Our Agents";
+const String OnBoardingSubtitle_2 = "Our app lets you to connect directly to our agents who are on call 24/7 as well chat with them with ease.";
+const String OnBoardingCounter_2 = "2/3";
+const String OnBoardingTitle_3 = "Start Finding Your New Home";
+const String OnBoardingSubtitle_3 = "Off we go! Explore or search on our app for your new home and realize the Alpha within";
+const String OnBoardingCounter_3= "3/3";

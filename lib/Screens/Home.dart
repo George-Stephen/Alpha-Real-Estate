@@ -8,8 +8,9 @@ class HomePage extends StatefulWidget{
 class _homeState extends State<HomePage>{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return const Text(
+      "Beginning"
+    );
   }
 
 }

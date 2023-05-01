@@ -28,7 +28,7 @@ class _BottomBarState extends State<BottomBar> {
             borderRadius: BorderRadius.circular(15),
           ),
           padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
-          child: Row(
+          child: Column(
             children: <Widget>[
               Icon(
                 widget.icons,
