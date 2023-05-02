@@ -7,3 +7,7 @@ const String OnBoardingCounter_2 = "2/3";
 const String OnBoardingTitle_3 = "Start Finding Your New Home";
 const String OnBoardingSubtitle_3 = "Off we go! Explore or search on our app for your new home and realize the Alpha within";
 const String OnBoardingCounter_3= "3/3";
+const String WelcomeTitle = "Perfect choice for your future";
+const String WelcomeSubTitle = "Finding a place to live can be a difficult task, therefore, we have done our very best to simplify it.";
+const String LoginButton = "Login";
+const String RegisterButton = "Register";

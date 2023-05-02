@@ -1,5 +1,6 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Screens/Onboarding/OnBoardingScreen.dart';
+import 'package:alpha_estates/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -20,16 +21,25 @@ class MyApp extends StatelessWidget {
       title: "Alpha Estates",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'LeonSans',
+        fontFamily: 'Roboto',
+          scaffoldBackgroundColor: const Color(0xff333846),
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           headline5: TextStyle(
               color: kContentColorTheme,
               fontWeight: FontWeight.w500,
-          )
+          ),
+          headline4: TextStyle(
+            color: kContentColorTheme,
+            fontWeight: FontWeight.w500,
+          ),
+          bodyText1: TextStyle(
+            color: kContentColorTheme,
+            fontWeight: FontWeight.normal,
+          ),
         )
       ),
-      home: OnBoardingScreen(),
+      home: WelcomeScreen(),
     );
   }
 }

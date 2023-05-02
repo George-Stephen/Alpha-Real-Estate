@@ -56,6 +56,9 @@ flutter:
           weight: 500
         - asset: fonts/LeonSans-Bold.otf
           weight: 700
+        - asset: fonts/Roboto-Medium.ttf
+        - asset: fonts/Roboto-Bold.ttf
+        - asset: fonts/Roboto-Regular.ttf
   
   
   
