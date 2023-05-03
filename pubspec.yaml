@@ -47,6 +47,7 @@ flutter:
   assets:
     - icons/
     - images/
+    - logo/
   fonts:
     - family: LeonSans
       fonts:

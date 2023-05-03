@@ -1,8 +1,10 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
+import 'package:alpha_estates/Screens/Authentication/Login/loginScreen.dart';
 import 'package:alpha_estates/Screens/Onboarding/OnBoardingScreen.dart';
 import 'package:alpha_estates/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 import 'Screens/Home.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
-    return MaterialApp(
+    return GetMaterialApp(
       title: "Alpha Estates",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -36,6 +38,11 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(
             color: kContentColorTheme,
             fontWeight: FontWeight.normal,
+          ),
+          bodyText2: TextStyle(
+            color: kContentColorTheme,
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
           ),
         )
       ),

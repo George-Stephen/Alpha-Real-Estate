@@ -2,6 +2,7 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Screens/Authentication/Login/loginScreen.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedController.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedFadeInWidget.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedModel.dart';
@@ -11,6 +12,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 class WelcomeScreen extends StatelessWidget{
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -50,13 +53,13 @@ class WelcomeScreen extends StatelessWidget{
                       children: [
                         Expanded(
                           child: OutlinedButton(
-                              onPressed: (){ },
+                              onPressed: () => Get.to(()=> const LoginScreen()),
                               style: OutlinedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0),
                                   side: const BorderSide(color: kContentColorTheme)
                                 ),
-                                padding: EdgeInsets.symmetric(vertical: kButtonHeight)
+                                padding: const EdgeInsets.symmetric(vertical: kButtonHeight)
                               ),
                               child: Text(LoginButton.toUpperCase(), style: const TextStyle(
                                 color: kContentColorTheme,
