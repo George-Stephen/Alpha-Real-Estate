@@ -16,7 +16,7 @@ class LoginHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image(image: AssetImage(kWelcomeImage), height: size.height * 0.2,),
+        Image(image: AssetImage(kSplashImage), height: size.height * 0.2,),
         Text(kLoginTitle, style: Theme.of(context).textTheme.headline4,),
         Text(kLoginSubtitle,style: Theme.of(context).textTheme.bodyText2,),
       ],

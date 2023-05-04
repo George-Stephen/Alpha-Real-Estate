@@ -19,7 +19,7 @@ class LoginForm extends StatelessWidget {
             children: [
               TextFormField(
                 decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.mail,color: kContentColorTheme,),
+                    prefixIcon: Icon(Icons.mail_lock_sharp,color: kContentColorTheme,),
                     labelText: kEmail,
                     labelStyle: TextStyle(
                         color: kContentColorTheme
@@ -28,9 +28,14 @@ class LoginForm extends StatelessWidget {
                     hintStyle: TextStyle(
                         color: kContentColorTheme
                     ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                    )
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                    borderSide: BorderSide(width: 2.0, color: kContentColorTheme),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                    borderSide: BorderSide(width: 2.0, color: kContentColorTheme),
+                  ),
                 ),
               ),
               const SizedBox(
@@ -51,10 +56,14 @@ class LoginForm extends StatelessWidget {
                     hintStyle: const TextStyle(
                         color: kContentColorTheme
                     ),
-                    border: const OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                        borderSide: BorderSide(color: kContentColorTheme)
-                    )
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                      borderSide: BorderSide(width: 2.0, color: kContentColorTheme),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                      borderSide: BorderSide(width: 2.0, color: kContentColorTheme),
+                    ),
                 ),
               ),
               const SizedBox(

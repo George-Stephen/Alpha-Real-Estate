@@ -3,6 +3,7 @@ import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Screens/Authentication/Login/loginScreen.dart';
+import 'package:alpha_estates/Screens/Authentication/Register/RegisterScreen.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedController.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedFadeInWidget.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedModel.dart';
@@ -39,11 +40,11 @@ class WelcomeScreen extends StatelessWidget{
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                     Image(image: const AssetImage(kWelcomeImage), height: size.height * 0.4,),
+                     Image(image: const AssetImage(kSplashImage), height: size.height * 0.4,),
                      Column(
                         children: [
                           Text(WelcomeTitle, style: Theme.of(context).textTheme.headline4,),
-                          SizedBox(
+                          const SizedBox(
                             height: 3.0,
                           ),
                           Text(WelcomeSubTitle, style: Theme.of(context).textTheme.bodyText1,textAlign: TextAlign.center,),
@@ -57,7 +58,7 @@ class WelcomeScreen extends StatelessWidget{
                               style: OutlinedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15.0),
-                                  side: const BorderSide(color: kContentColorTheme)
+                                  side: const BorderSide(width: 5,color: kContentColorTheme)
                                 ),
                                 padding: const EdgeInsets.symmetric(vertical: kButtonHeight)
                               ),
@@ -71,7 +72,7 @@ class WelcomeScreen extends StatelessWidget{
                         ),
                         Expanded(
                           child: ElevatedButton(
-                              onPressed: (){ },
+                              onPressed: () => Get.to(()=> const RegisterScreen()),
                               style: ElevatedButton.styleFrom(
                                   elevation: 0,
                                   shape: RoundedRectangleBorder(
@@ -98,5 +99,4 @@ class WelcomeScreen extends StatelessWidget{
       )
       );
   }
-  
 }

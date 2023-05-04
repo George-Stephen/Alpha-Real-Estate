@@ -2,8 +2,11 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Screens/Authentication/Register/RegisterScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class LoginFooter extends StatelessWidget {
   const LoginFooter({
@@ -31,8 +34,8 @@ class LoginFooter extends StatelessWidget {
                 ),
                 padding: const EdgeInsets.symmetric(vertical: kButtonHeight)
             ),
-            label: const Text(
-                kLoginWithGoogle,
+            label: Text(
+                kLoginWithGoogle.toUpperCase(),
                 style: TextStyle(color: kContentColorTheme,)
             ),
           ),
@@ -40,7 +43,8 @@ class LoginFooter extends StatelessWidget {
         const SizedBox(
           height: kFormHeight -20,
         ),
-        TextButton(onPressed: (){},
+        TextButton(
+          onPressed: () => Get.to(()=> const RegisterScreen()),
           child: Text.rich(
             TextSpan(
                 text: kRegisterText,

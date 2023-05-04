@@ -12,11 +12,17 @@ const String WelcomeSubTitle = "Finding a place to live can be a difficult task,
 const String LoginButton = "Login";
 const String RegisterButton = "Register";
 const String kLoginTitle = "Welcome Back";
-const String kLoginSubtitle = "Resume your journey, to find your dream home.";
+const String kLoginSubtitle = "Let's find your dream home.";
 const String kRemember = "Remember me";
 const String kRegisterText = "Don't have an account? ";
-const String kAlreadyhaveAnAccount = "Already have an account?";
-const String kEmail = "Email address";
-const String kPassword ="Password";
+const String kAlreadyhaveAnAccount = "Already have an account? ";
 const String kForgotPassword = "Forgot Password?";
 const String kLoginWithGoogle = "Login with Google";
+const String kRegisterWithGoogle = "Register with Google";
+
+// register strings
+const String kRegisterTitle = "Hello There";
+const String kRegisterName = "Full name";
+const String kEmail = "Email address";
+const String kRegisterPhone = "Phone number";
+const String kPassword ="Password";
