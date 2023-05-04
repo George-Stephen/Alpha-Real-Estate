@@ -8,6 +8,6 @@ const kBackgroundColor = Color(0xff333846);
 const kLinkColor = Color(0xFF5758C5);
 const kHeadingColor = Color(0xFF9FAAC3);
 
+const kOnBoardingColor_1 = Color(0xff333846);
+const kOnBoardingColor_2 = Color(0xff2E3850);
 const kOnBoardingColor_3 = Color(0xff333846);
-const kOnBoardingColor_2 = Color(0xff3A4664);
-const kOnBoardingColor_1 = Color(0xff2E3850);

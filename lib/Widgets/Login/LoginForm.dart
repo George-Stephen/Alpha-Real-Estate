@@ -1,8 +1,10 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Screens/Authentication/ForgotPassword/ForgotPasswordOptions/ForgotPasswordModelBottomSheet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:alpha_estates/Screens/Authentication/ForgotPassword/ForgotPasswordOptions/ForgotPasswordWidget.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -56,11 +58,11 @@ class LoginForm extends StatelessWidget {
                     hintStyle: const TextStyle(
                         color: kContentColorTheme
                     ),
-                    focusedBorder: OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
                       borderSide: BorderSide(width: 2.0, color: kContentColorTheme),
                     ),
-                    enabledBorder: OutlineInputBorder(
+                    enabledBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12.0)),
                       borderSide: BorderSide(width: 2.0, color: kContentColorTheme),
                     ),
@@ -72,7 +74,9 @@ class LoginForm extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      ForgotPasswordScreen.buildShowModalBottomSheet(context);
+                    },
                     child: Text(kForgotPassword,style: Theme.of(context).textTheme.bodyText2,)
                 ),
               ),
@@ -102,4 +106,6 @@ class LoginForm extends StatelessWidget {
         )
     );
   }
+
 }
+

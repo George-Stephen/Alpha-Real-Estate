@@ -16,7 +16,7 @@ const String kLoginSubtitle = "Let's find your dream home.";
 const String kRemember = "Remember me";
 const String kRegisterText = "Don't have an account? ";
 const String kAlreadyhaveAnAccount = "Already have an account? ";
-const String kForgotPassword = "Forgot Password?";
+const String kForgotPassword = "Forgot Password";
 const String kLoginWithGoogle = "Login with Google";
 const String kRegisterWithGoogle = "Register with Google";
 
@@ -26,3 +26,16 @@ const String kRegisterName = "Full name";
 const String kEmail = "Email address";
 const String kRegisterPhone = "Phone number";
 const String kPassword ="Password";
+
+// forgot password
+const String kForgetPasswordTitle = "Choose One Option!";
+const String kForgetPasswordSubTitle = "Select either phone or Email address to reset your password.";
+const String kResetViaEMail = "Reset Via Email Address";
+const String kResetViaPhone = "Reset Via Phone Number";
+
+// -- Forget Password Via Phone - Text
+const String kForgetPhoneSubTitle = "Enter your Phone Number to receive confirmation code";
+const String kSendConfirmation = "Send Code";
+
+// -- Forget Password Via E-Mail - Text
+const String kForgetMailSubTitle = "Enter your Email Address to receive confirmation code";

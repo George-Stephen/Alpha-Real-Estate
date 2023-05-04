@@ -1,3 +1,4 @@
+import 'package:alpha_estates/Screens/Welcome/welcome_screen.dart';
 import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
@@ -38,7 +39,13 @@ class OnBoardingController extends GetxController{
   void onPageChangedCallback(int activePageIndex) {
       currentPage.value = activePageIndex;
   }
-  next() => controller.animateToPage(page: controller.currentPage + 1);
+  next(){
+    if(currentPage.value == 2){
+      Get.to(() => const WelcomeScreen());
+    }else{
+      controller.animateToPage(page: controller.currentPage + 1);
+    }
+  }
   skip() => controller.jumpToPage(page: 2);
 
 }
