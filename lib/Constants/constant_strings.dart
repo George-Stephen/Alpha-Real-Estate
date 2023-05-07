@@ -39,3 +39,11 @@ const String kSendConfirmation = "Send Code";
 
 // -- Forget Password Via E-Mail - Text
 const String kForgetMailSubTitle = "Enter your Email Address to receive confirmation code";
+
+// OTP confirmation
+const String kOTPTitle ="CO\nDE";
+const String kOTPSubtitle ="Verify your account";
+const String kOTPMessage ="Please enter the confirmation code sent to ";
+const String kConfirmCode = "Confirm code";
+
+const String kContact = "Contact Agent";

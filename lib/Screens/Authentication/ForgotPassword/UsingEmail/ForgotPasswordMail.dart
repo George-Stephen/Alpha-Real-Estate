@@ -2,12 +2,15 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Screens/Authentication/ForgotPassword/Confirmation_OTP/OTPScreen.dart';
 import 'package:alpha_estates/Widgets/Form/FormHeaderWidget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ForgotPasswordMailScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    final TextEditingController controller = TextEditingController();
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -34,6 +37,10 @@ class ForgotPasswordMailScreen extends StatelessWidget{
                     child: Column(
                       children: [
                         TextFormField(
+                          style: const TextStyle(
+                              color: kContentColorTheme
+                          ),
+                          controller : controller,
                           decoration: const InputDecoration(
                             prefixIcon: Icon(Icons.mail_lock_sharp,color: kContentColorTheme,),
                             labelText: kEmail,
@@ -60,7 +67,10 @@ class ForgotPasswordMailScreen extends StatelessWidget{
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              var content = controller.text;
+                              Get.to(()=> OTPScreen(), arguments: [content]);
+                            },
                             style: ElevatedButton.styleFrom(
                                 elevation: 0,
                                 shape: RoundedRectangleBorder(

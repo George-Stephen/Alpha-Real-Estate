@@ -1,5 +1,6 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Screens/Authentication/Login/loginScreen.dart';
+import 'package:alpha_estates/Screens/Detail_screens/Home_detail.dart';
 import 'package:alpha_estates/Screens/Onboarding/OnBoardingScreen.dart';
 import 'package:alpha_estates/Screens/Splashscreen/SplashScreen.dart';
 import 'package:alpha_estates/Screens/Welcome/welcome_screen.dart';
@@ -7,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-import 'Screens/Home.dart';
+import 'Screens/DashBoard/Dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +34,10 @@ class MyApp extends StatelessWidget {
           headline5: TextStyle(
               color: kContentColorTheme,
               fontWeight: FontWeight.w500,
+          ),
+          headline6: TextStyle(
+            color: kContentColorTheme,
+            fontWeight: FontWeight.w500,
           ),
           headline4: TextStyle(
             color: kContentColorTheme,

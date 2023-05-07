@@ -20,6 +20,9 @@ class LoginForm extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextFormField(
+                style: const TextStyle(
+                    color: kContentColorTheme
+                ),
                 decoration: const InputDecoration(
                     prefixIcon: Icon(Icons.mail_lock_sharp,color: kContentColorTheme,),
                     labelText: kEmail,
@@ -44,6 +47,9 @@ class LoginForm extends StatelessWidget {
                 height: kFormHeight -20,
               ),
               TextFormField(
+                style: const TextStyle(
+                    color: kContentColorTheme
+                ),
                 decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.fingerprint,color: kContentColorTheme,),
                     suffixIcon: IconButton(

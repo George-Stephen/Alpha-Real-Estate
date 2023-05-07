@@ -18,6 +18,9 @@ class RegisterForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              style: const TextStyle(
+                  color: kContentColorTheme
+              ),
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.person_outline_rounded,color: kContentColorTheme,),
                 labelText: kRegisterName,
@@ -42,6 +45,9 @@ class RegisterForm extends StatelessWidget {
               height: kFormHeight-20,
             ),
             TextFormField(
+              style: const TextStyle(
+                  color: kContentColorTheme
+              ),
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.mail_lock_sharp,color: kContentColorTheme,),
                 labelText: kEmail,
@@ -66,6 +72,9 @@ class RegisterForm extends StatelessWidget {
               height: kFormHeight-20,
             ),
             TextFormField(
+              style: const TextStyle(
+                  color: kContentColorTheme
+              ),
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.numbers,color: kContentColorTheme,),
                 labelText: kRegisterPhone,
@@ -90,6 +99,9 @@ class RegisterForm extends StatelessWidget {
               height: kFormHeight-20,
             ),
             TextFormField(
+              style: const TextStyle(
+                  color: kContentColorTheme
+              ),
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.fingerprint,color: kContentColorTheme,),
                 labelText: kPassword,

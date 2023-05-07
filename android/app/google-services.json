@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "693855062171",
+    "project_id": "alpha-real-estate-e46c6",
+    "storage_bucket": "alpha-real-estate-e46c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693855062171:android:7ba64e8da8f8046a095e3e",
+        "android_client_info": {
+          "package_name": "com.infinity.alpha_estates"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693855062171-69hvssrj5s8t6bjekf8hjmu1mm17umbn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4CZ6cqymD2FHMQEADgrlidP7_7-KZkxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693855062171-69hvssrj5s8t6bjekf8hjmu1mm17umbn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

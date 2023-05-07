@@ -12,7 +12,7 @@ dependencies:
   eva_icons_flutter: ^3.1.0
   google_fonts: ^4.0.4
   otp_text_field: ^1.1.3
-  google_maps_flutter: ^2.2.5
+  google_maps_flutter: ^2.2.6
   http: ^0.13.5
   fluttertoast: ^8.2.1
   toast: ^0.3.0
@@ -22,6 +22,9 @@ dependencies:
   liquid_swipe: ^3.1.0
   smooth_page_indicator: ^1.1.0
   get: ^4.6.5
+  flutter_otp_text_field: ^1.1.1
+  firebase_core: ^2.11.0
+  readmore: ^2.2.0
 
 flutter_launcher_icons:
   image_path: "icons/AppIcon.png"
@@ -36,6 +39,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/map_style.json
     - icons/
     - images/
     - logo/
