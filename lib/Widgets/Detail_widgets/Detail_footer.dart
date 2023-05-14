@@ -35,14 +35,11 @@ class Detail_footer extends StatelessWidget {
                 child: Text.rich(
                     TextSpan(
                         text: home.price,
-                        style: Theme.of(context).textTheme.headline4,
-                        children: const [
+                        style: Theme.of(context).textTheme.headline5,
+                        children: [
                           TextSpan(
                             text: " /Month",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15,
-                            ),
+                            style: Theme.of(context).textTheme.bodyText2,
                           )
                         ]
                     )
@@ -50,20 +47,20 @@ class Detail_footer extends StatelessWidget {
             ),
             Expanded(
               child: ElevatedButton(
-                onPressed: () => launch("tel: " + home.realtor_phone_number),
+                onPressed: () => launch("tel: ${home.realtor_phone_number}"),
                 style: ElevatedButton.styleFrom(
                     elevation: 0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                        side: const BorderSide(color: kContentColorTheme)
+                        borderRadius: BorderRadius.circular(25.0),
+                        side: const BorderSide(color: kButtonColor)
                     ),
-                    backgroundColor: kContentColorTheme,
+                    backgroundColor: kButtonColor,
                     padding: const EdgeInsets.symmetric(vertical: kButtonHeight)
                 ),
                 child: Text(
                   kContact.toUpperCase(),
                   style: const TextStyle(
-                      color: kBackgroundColor
+                      color: kContentColorTheme
                   ),
                 ),
               ),

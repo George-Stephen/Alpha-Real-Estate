@@ -25,6 +25,8 @@ dependencies:
   flutter_otp_text_field: ^1.1.1
   firebase_core: ^2.11.0
   readmore: ^2.2.0
+  auto_size_text: ^3.0.0
+  floating_bottom_bar: ^0.0.2
 
 flutter_launcher_icons:
   image_path: "icons/AppIcon.png"

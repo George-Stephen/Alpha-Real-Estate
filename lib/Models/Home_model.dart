@@ -3,14 +3,15 @@ class Home {
   String title;
   String location;
   String description;
-  int bedrooms;
-  int bathrooms;
+  String bedrooms;
+  String bathrooms;
   String parking_spaces;
   String bed_imageUrl;
   String bath_imageUrl;
   String kitchen_imageUrl;
   String lat;
   String long;
+  String property_size;
   String realtor_phone_number;
   String year_built;
   String home_state;
@@ -30,6 +31,7 @@ class Home {
     required this.kitchen_imageUrl,
     required this.lat,
     required this.long,
+    required this.property_size,
     required this.home_state,
     required this.property_type,
     required this.year_built,

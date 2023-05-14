@@ -2,8 +2,11 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Models/Home_model.dart';
 import 'package:alpha_estates/Screens/Detail_screens/Home_detail.dart';
+import 'package:alpha_estates/Screens/Detail_screens/full_screen.dart';
 import 'package:alpha_estates/Widgets/Detail_widgets/Detail_footer.dart';
+import 'package:alpha_estates/Widgets/Detail_widgets/detail_header.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:readmore/readmore.dart';
 import 'package:flutter/material.dart';
@@ -62,9 +65,6 @@ class _homedetailState extends State<HomeDetailScreen>{
                           trimMode: TrimMode.Line,
                           trimCollapsedText: "Expand",
                           trimExpandedText: "Collapse",
-                          moreStyle: TextStyle(
-                            color: kLinkColor,
-                          ),
                         ),
                         const SizedBox(
                           height: 20.0,
@@ -80,10 +80,10 @@ class _homedetailState extends State<HomeDetailScreen>{
                                         padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15,top: 15),
                                         decoration: BoxDecoration(
                                             border: Border.all(color: Colors.white12),
-                                            borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                                            borderRadius: const BorderRadius.all(Radius.circular(15.0)),
                                             color: Colors.white12.withOpacity(0.1)
                                         ),
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.king_bed_rounded,
                                           color: kContentColorTheme,
                                         ),
@@ -100,8 +100,8 @@ class _homedetailState extends State<HomeDetailScreen>{
                                                 ),
                                               ),
                                               Text(
-                                                "$widget.home.bedrooms Rooms",
-                                                style: TextStyle(
+                                                "${widget.home.bedrooms} Rooms",
+                                                style: const TextStyle(
                                                   color: kContentColorTheme,
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 15.0
@@ -121,10 +121,10 @@ class _homedetailState extends State<HomeDetailScreen>{
                                         padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15,top: 15),
                                         decoration: BoxDecoration(
                                             border: Border.all(color: Colors.white12),
-                                            borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                                            borderRadius: const BorderRadius.all(Radius.circular(15.0)),
                                             color: Colors.white12.withOpacity(0.1)
                                         ),
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.bathtub,
                                           color: kContentColorTheme,
                                         ),
@@ -141,8 +141,8 @@ class _homedetailState extends State<HomeDetailScreen>{
                                               ),
                                             ),
                                             Text(
-                                              "$widget.home.bathrooms Rooms",
-                                              style: TextStyle(
+                                              "${widget.home.bathrooms} Rooms",
+                                              style: const TextStyle(
                                                   color: kContentColorTheme,
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 15.0
@@ -171,10 +171,10 @@ class _homedetailState extends State<HomeDetailScreen>{
                                         padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15,top: 15),
                                         decoration: BoxDecoration(
                                             border: Border.all(color: Colors.white12),
-                                            borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                                            borderRadius: const BorderRadius.all(Radius.circular(15.0)),
                                             color: Colors.white12.withOpacity(0.1)
                                         ),
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.calendar_month,
                                           color: kContentColorTheme,
                                         ),
@@ -192,7 +192,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                             ),
                                             Text(
                                               widget.home.year_built,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   color: kContentColorTheme,
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 15.0
@@ -212,11 +212,11 @@ class _homedetailState extends State<HomeDetailScreen>{
                                         padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15,top: 15),
                                         decoration: BoxDecoration(
                                             border: Border.all(color: Colors.white12),
-                                            borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                                            borderRadius: const BorderRadius.all(Radius.circular(15.0)),
                                             color: Colors.white12.withOpacity(0.1)
                                         ),
-                                        child: Icon(
-                                          Icons.house,
+                                        child: const Icon(
+                                          Icons.apartment,
                                           color: kContentColorTheme,
                                         ),
                                       ),
@@ -233,7 +233,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                             ),
                                             Text(
                                               widget.home.property_type,
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   color: kContentColorTheme,
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 15.0
@@ -248,6 +248,9 @@ class _homedetailState extends State<HomeDetailScreen>{
                             ],
                           ),
                         ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
                         Container(
                           child: Row(
                             children: [
@@ -259,10 +262,10 @@ class _homedetailState extends State<HomeDetailScreen>{
                                         padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15,top: 15),
                                         decoration: BoxDecoration(
                                             border: Border.all(color: Colors.white12),
-                                            borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                                            borderRadius: const BorderRadius.all(Radius.circular(15.0)),
                                             color: Colors.white12.withOpacity(0.1)
                                         ),
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.local_parking,
                                           color: kContentColorTheme,
                                         ),
@@ -279,8 +282,49 @@ class _homedetailState extends State<HomeDetailScreen>{
                                               ),
                                             ),
                                             Text(
-                                              "$widget.home.parking_spaces spaces",
+                                              "${widget.home.parking_spaces} spaces",
+                                              style: const TextStyle(
+                                                  color: kContentColorTheme,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15.0
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  )
+                              ),
+                              Expanded(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15,top: 15),
+                                        decoration: BoxDecoration(
+                                            border: Border.all(color: Colors.white12),
+                                            borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                                            color: Colors.white12.withOpacity(0.1)
+                                        ),
+                                        child: const Icon(
+                                          Icons.map,
+                                          color: kContentColorTheme,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 15.0),
+                                        child: Column(
+                                          children: [
+                                            const Text(
+                                              "Property size",
                                               style: TextStyle(
+                                                  color: kContentColorTheme,
+                                                  fontSize: 12.0
+                                              ),
+                                            ),
+                                            Text(
+                                              "${widget.home.property_size} m²",
+                                              style: const TextStyle(
                                                   color: kContentColorTheme,
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 15.0
@@ -353,9 +397,35 @@ class _homedetailState extends State<HomeDetailScreen>{
                                     children: [
                                       Positioned(
                                           top: 10,
+                                          right: 10,
+                                          child: SizedBox(
+                                            height: 30,
+                                            width: 40,
+                                            child: OutlinedButton(
+                                              onPressed: (){
+                                                Get.to(()=> ImageFullScreen(), arguments: [widget.home.bed_imageUrl]);
+                                              },
+                                              style: OutlinedButton.styleFrom(
+                                                  shape: const RoundedRectangleBorder(
+                                                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                                      side: BorderSide.none
+                                                  ),
+                                                  padding: const EdgeInsets.symmetric(vertical: kButtonHeight/2),
+                                                  backgroundColor: Colors.transparent
+                                              ),
+                                              child: const Icon(
+                                                Icons.fullscreen,
+                                                color: Colors.white,
+                                                size: 18,
+                                              ),
+                                            ),
+                                          )
+                                      ),
+                                      Positioned(
+                                          top: 10,
                                           left: 10,
                                           child: SizedBox(
-                                            width: 200,
+                                            width: 150,
                                             height: 50,
                                             child: Container(
                                                 padding: const EdgeInsets.all(8.0),
@@ -368,7 +438,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                                   mainAxisAlignment: MainAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      "Bedroom : ",
+                                                      "Bedroom",
                                                       textAlign: TextAlign.justify,
                                                       style: Theme.of(context).textTheme.headline5,
                                                     ),
@@ -402,9 +472,35 @@ class _homedetailState extends State<HomeDetailScreen>{
                                     children: [
                                       Positioned(
                                           top: 10,
+                                          right: 10,
+                                          child: SizedBox(
+                                            height: 30,
+                                            width: 40,
+                                            child: OutlinedButton(
+                                              onPressed: (){
+                                                Get.to(()=> ImageFullScreen(), arguments: [widget.home.bath_imageUrl]);
+                                              },
+                                              style: OutlinedButton.styleFrom(
+                                                  shape: const RoundedRectangleBorder(
+                                                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                                      side: BorderSide.none
+                                                  ),
+                                                  padding: const EdgeInsets.symmetric(vertical: kButtonHeight/2),
+                                                  backgroundColor: Colors.transparent
+                                              ),
+                                              child: const Icon(
+                                                Icons.fullscreen,
+                                                color: Colors.white,
+                                                size: 18,
+                                              ),
+                                            ),
+                                          )
+                                      ),
+                                      Positioned(
+                                          top: 10,
                                           left: 10,
                                           child: SizedBox(
-                                            width: 200,
+                                            width: 150,
                                             height: 50,
                                             child: Container(
                                                 padding: const EdgeInsets.all(8.0),
@@ -417,7 +513,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                                   mainAxisAlignment: MainAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      "Bathroom : ",
+                                                      "Bathroom ",
                                                       textAlign: TextAlign.justify,
                                                       style: Theme.of(context).textTheme.headline5,
                                                     ),
@@ -451,9 +547,35 @@ class _homedetailState extends State<HomeDetailScreen>{
                                     children: [
                                       Positioned(
                                           top: 10,
+                                          right: 10,
+                                          child: SizedBox(
+                                            height: 30,
+                                            width: 40,
+                                            child: OutlinedButton(
+                                              onPressed: (){
+                                                Get.to(()=> ImageFullScreen(), arguments: [widget.home.kitchen_imageUrl]);
+                                              },
+                                              style: OutlinedButton.styleFrom(
+                                                  shape: const RoundedRectangleBorder(
+                                                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                                      side: BorderSide.none
+                                                  ),
+                                                  padding: const EdgeInsets.symmetric(vertical: kButtonHeight/2),
+                                                  backgroundColor: Colors.transparent
+                                              ),
+                                              child: const Icon(
+                                                Icons.fullscreen,
+                                                color: Colors.white,
+                                                size: 18,
+                                              ),
+                                            ),
+                                          )
+                                      ),
+                                      Positioned(
+                                          top: 10,
                                           left: 10,
                                           child: SizedBox(
-                                            width: 200,
+                                            width: 150,
                                             height: 50,
                                             child: Container(
                                                 padding: const EdgeInsets.all(8.0),
@@ -466,7 +588,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                                   mainAxisAlignment: MainAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      "Kitchen : ",
+                                                      "Kitchen ",
                                                       textAlign: TextAlign.justify,
                                                       style: Theme.of(context).textTheme.headline5,
                                                     ),
@@ -502,7 +624,7 @@ class _homedetailState extends State<HomeDetailScreen>{
       return {
             Marker(
             position: latlng,
-            markerId: MarkerId("new_marker")
+            markerId: const MarkerId("new_marker")
           )
       };
   }

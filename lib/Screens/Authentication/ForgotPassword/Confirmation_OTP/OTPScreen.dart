@@ -1,6 +1,7 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Screens/Dashboard/DashboardPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
@@ -45,7 +46,9 @@ class OTPScreen extends StatelessWidget{
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  Get.to(() => DashboardPage());
+                },
                 style: ElevatedButton.styleFrom(
                     elevation: 0,
                     shape: RoundedRectangleBorder(

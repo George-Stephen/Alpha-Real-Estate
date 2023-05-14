@@ -7,6 +7,8 @@ const kErrorColor = Color(0xFFF03738);
 const kBackgroundColor = Color(0xff333846);
 const kLinkColor = Color(0xFF5758C5);
 const kHeadingColor = Color(0xFF9FAAC3);
+const kBarColor = Color(0xFF2f3542);
+const kButtonColor = Color(0xFF578DC5);
 
 const kOnBoardingColor_1 = Color(0xff333846);
 const kOnBoardingColor_2 = Color(0xff2E3850);

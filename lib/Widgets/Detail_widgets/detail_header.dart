@@ -68,7 +68,7 @@ class Detail_header extends StatelessWidget {
                     width: 40,
                     child: OutlinedButton(
                       onPressed: (){
-                        Get.to(()=> ImageFullScreen());
+                        Get.to(()=> ImageFullScreen(), arguments: [home.imageUrl]);
                       },
                       style: OutlinedButton.styleFrom(
                           shape: const RoundedRectangleBorder(
@@ -95,7 +95,7 @@ class Detail_header extends StatelessWidget {
                     child: Container(
                         padding: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
-                            color: Colors.transparent.withOpacity(0.2),
+                            color: Colors.transparent.withOpacity(0.4),
                             borderRadius: const BorderRadius.all(Radius.circular(15.0))
                         ),
                         child: Column(

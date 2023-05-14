@@ -47,7 +47,7 @@ class OnBoardingScreen extends StatelessWidget{
                         color: kBackgroundColor,
                         shape: BoxShape.circle
                       ),
-                      child: Icon(Icons.arrow_forward_ios),
+                      child: Icon(Icons.arrow_forward_ios, color: kContentColorTheme,),
                     ),
                   ),
               ),
@@ -70,7 +70,7 @@ class OnBoardingScreen extends StatelessWidget{
                   activeIndex: ob_controller.currentPage.value,
                   count: 3,
                   effect: const ExpandingDotsEffect(
-                    activeDotColor: Color(0xff272727),
+                    activeDotColor: kContentColorTheme,
                   ),
                 )
             ),
