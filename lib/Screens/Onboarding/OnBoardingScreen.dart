@@ -14,7 +14,7 @@ import '../../Widgets/OnBoardingPage_widget.dart';
 class OnBoardingScreen extends StatelessWidget{
 
 
-  OnBoardingScreen({super.key});
+  const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class OnBoardingScreen extends StatelessWidget{
           LiquidSwipe(
               pages: ob_controller.pages,
               liquidController: ob_controller.controller,
-              slideIconWidget: Icon(Icons.arrow_back_ios),
+              slideIconWidget: const Icon(Icons.arrow_back_ios),
               onPageChangeCallback: ob_controller.onPageChangedCallback,
               enableSideReveal: true,
           ),
@@ -43,11 +43,11 @@ class OnBoardingScreen extends StatelessWidget{
                     ),
                     child: Container(
                       padding: const EdgeInsets.all(20.0),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: kBackgroundColor,
                         shape: BoxShape.circle
                       ),
-                      child: Icon(Icons.arrow_forward_ios, color: kContentColorTheme,),
+                      child: const Icon(Icons.arrow_forward_ios, color: kContentColorTheme,),
                     ),
                   ),
               ),
