@@ -3,6 +3,7 @@ import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Models/Home_model.dart';
 import 'package:alpha_estates/Screens/Detail_screens/Home_detail.dart';
 import 'package:alpha_estates/Widgets/Dashboard_widgets/CarouselWidgets/HomeCarouselWidget.dart';
+import 'package:alpha_estates/repository/authentication_repository/auth_repository.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -129,6 +130,7 @@ class _HomeState extends State<HomeWidget>{
             width: 40,
             child: OutlinedButton(
             onPressed: (){
+              AuthenticationRepository.instance.logout();
             },
             style: OutlinedButton.styleFrom(
             shape: const RoundedRectangleBorder(

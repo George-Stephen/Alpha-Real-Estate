@@ -58,7 +58,8 @@ class OnBoardingScreen extends StatelessWidget{
                 onPressed: () => ob_controller.skip(),
                 child: const Text("Skip",
                   style: TextStyle(
-                    color: kLinkColor
+                    color: kContentColorTheme,
+                    fontSize: 15
                   ),
                 ),
               )

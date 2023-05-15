@@ -1,8 +1,11 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Controllers/register_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({
@@ -11,13 +14,17 @@ class RegisterForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(RegisterController());
+    final _formKey = GlobalKey<FormState>();
     return Container(
-      padding: EdgeInsets.symmetric(vertical: kFormHeight -10),
+      padding: const EdgeInsets.symmetric(vertical: kFormHeight -10),
       child: Form(
+        key: _formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              controller: controller.fullName,
               style: const TextStyle(
                   color: kContentColorTheme
               ),
@@ -41,10 +48,11 @@ class RegisterForm extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: kFormHeight-20,
             ),
             TextFormField(
+              controller: controller.email_address,
               style: const TextStyle(
                   color: kContentColorTheme
               ),
@@ -68,10 +76,11 @@ class RegisterForm extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: kFormHeight-20,
             ),
             TextFormField(
+              controller: controller.phone_number,
               style: const TextStyle(
                   color: kContentColorTheme
               ),
@@ -95,13 +104,18 @@ class RegisterForm extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: kFormHeight-20,
             ),
             TextFormField(
+              controller: controller.password,
+              obscureText: true,
               style: const TextStyle(
                   color: kContentColorTheme
               ),
+              inputFormatters: [
+                LengthLimitingTextInputFormatter(14),
+              ],
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.fingerprint,color: kContentColorTheme,),
                 labelText: kPassword,
@@ -122,13 +136,17 @@ class RegisterForm extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: kFormHeight-20,
             ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  if(_formKey.currentState!.validate()){
+                    RegisterController.instance.registerUser(controller.email_address.text.trim(), controller.password.text.trim());
+                  }
+                },
                 style: ElevatedButton.styleFrom(
                     elevation: 0,
                     shape: RoundedRectangleBorder(

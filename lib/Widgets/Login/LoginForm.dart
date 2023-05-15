@@ -1,10 +1,12 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Controllers/login_controller.dart';
 import 'package:alpha_estates/Screens/Authentication/ForgotPassword/ForgotPasswordOptions/ForgotPasswordModelBottomSheet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:alpha_estates/Screens/Authentication/ForgotPassword/ForgotPasswordOptions/ForgotPasswordWidget.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -13,13 +15,17 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
+    final _formKey = GlobalKey<FormState>();
     return Form(
+        key: _formKey,
         child: Container(
-          padding:  EdgeInsets.symmetric(vertical: kFormHeight-10),
+          padding:  const EdgeInsets.symmetric(vertical: kFormHeight-10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextFormField(
+                controller: controller.email_address,
                 style: const TextStyle(
                     color: kContentColorTheme
                 ),
@@ -47,9 +53,14 @@ class LoginForm extends StatelessWidget {
                 height: kFormHeight -20,
               ),
               TextFormField(
+                controller: controller.password,
+                obscureText: true,
                 style: const TextStyle(
                     color: kContentColorTheme
                 ),
+                inputFormatters: [
+                  LengthLimitingTextInputFormatter(15),
+                ],
                 decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.fingerprint,color: kContentColorTheme,),
                     suffixIcon: IconButton(
@@ -89,7 +100,11 @@ class LoginForm extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    if(_formKey.currentState!.validate()){
+                      LoginController.instance.Login(controller.email_address.text.trim(), controller.password.text.trim());
+                    }
+                  },
                   style: ElevatedButton.styleFrom(
                       elevation: 0,
                       shape: RoundedRectangleBorder(
