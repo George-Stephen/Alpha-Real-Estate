@@ -14,8 +14,7 @@ class RegisterScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(kDefaultPadding),
@@ -45,7 +44,7 @@ class RegisterScreen extends StatelessWidget{
                         ),
                         label:  Text(
                             kLoginWithGoogle.toUpperCase(),
-                            style: TextStyle(color: kContentColorTheme,)
+                            style: const TextStyle(color: kContentColorTheme,)
                         ),
                       ),
                     ),
@@ -72,8 +71,7 @@ class RegisterScreen extends StatelessWidget{
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 
 }

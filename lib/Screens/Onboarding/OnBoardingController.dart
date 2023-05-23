@@ -14,21 +14,21 @@ class OnBoardingController extends GetxController{
 
   final pages = [
     OnBoardingPage(model: OnBoardingModel(
-        image: kOnBoardingImage_1,
+        image: kSplashImage,
         Title: OnBoardingTitle_1,
         SubTitle: OnBoardingSubtitle_1,
         CounterText: OnBoardingCounter_1,
         bg_color: kOnBoardingColor_1),
     ),
     OnBoardingPage(model: OnBoardingModel(
-        image: kOnBoardingImage_2,
+        image: kSplashImage,
         Title: OnBoardingTitle_2,
         SubTitle: OnBoardingSubtitle_2,
         CounterText: OnBoardingCounter_2,
         bg_color: kOnBoardingColor_2),
     ),
     OnBoardingPage(model: OnBoardingModel(
-        image: kOnBoardingImage_3,
+        image: kSplashImage,
         Title: OnBoardingTitle_3,
         SubTitle: OnBoardingSubtitle_3,
         CounterText: OnBoardingCounter_3,

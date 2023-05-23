@@ -69,6 +69,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '693855062171',
     projectId: 'alpha-real-estate-e46c6',
     storageBucket: 'alpha-real-estate-e46c6.appspot.com',
+    androidClientId: '693855062171-kc6ttlur5poiobuv5hniq6p9rod0d94g.apps.googleusercontent.com',
     iosClientId: '693855062171-mqpi9uajrp2i1ould5697jopmrc4nvgd.apps.googleusercontent.com',
     iosBundleId: 'com.infinity.alphaEstates',
   );

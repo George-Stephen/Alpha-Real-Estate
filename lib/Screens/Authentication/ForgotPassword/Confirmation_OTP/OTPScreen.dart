@@ -1,8 +1,10 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Controllers/OTP_controller.dart';
 import 'package:alpha_estates/Screens/Dashboard/DashboardPage.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
@@ -11,6 +13,8 @@ import 'package:google_fonts/google_fonts.dart';
 class OTPScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    var data_1;
+    OTPController controller = Get.put(OTPController());
     var data = Get.arguments;
     return Scaffold(
       body: Container(
@@ -38,7 +42,10 @@ class OTPScreen extends StatelessWidget{
                 filled: true,
                 keyboardType: TextInputType.number,
                 focusedBorderColor: kContentColorTheme,
-                onSubmit: (code){ print("Confirmation code is $code"); },
+                onSubmit: (code){
+                  data_1 = code;
+                  controller.verifyOTP(data_1);
+                },
             ),
             const SizedBox(
               height: 20.0,
@@ -47,7 +54,10 @@ class OTPScreen extends StatelessWidget{
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: (){
-                  Get.to(() => DashboardPage());
+                  if (kDebugMode) {
+                    print("Confirmation code is $data_1");
+                  }
+                  controller.verifyOTP(data_1);
                 },
                 style: ElevatedButton.styleFrom(
                     elevation: 0,

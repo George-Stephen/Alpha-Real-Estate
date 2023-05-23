@@ -24,7 +24,7 @@ class OnBoardingPage extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image(image: AssetImage(model.image), height: size.height * 0.4,),
+          Image(image: AssetImage(model.image), height: size.height * 0.5,),
           Column(
             children: [
               Text(model.Title,
@@ -32,14 +32,15 @@ class OnBoardingPage extends StatelessWidget {
               ),
               Text(model.SubTitle,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                     color: kContentColorTheme
                 ),
               ),
             ],
           ),
-          Text(model.CounterText,
-            style: TextStyle(
+          Text(
+            model.CounterText,
+            style: const TextStyle(
               color: kContentColorTheme,
               fontWeight: FontWeight.bold,
             ),

@@ -2,6 +2,7 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/Controllers/register_controller.dart';
 import 'package:alpha_estates/Screens/Authentication/ForgotPassword/Confirmation_OTP/OTPScreen.dart';
 import 'package:alpha_estates/Widgets/Form/FormHeaderWidget.dart';
 import 'package:flutter/material.dart';
@@ -10,24 +11,23 @@ import 'package:get/get.dart';
 class ForgotPasswordPhoneScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    final TextEditingController controller = TextEditingController();
-    return SafeArea(
-      child: Scaffold(
+    final controller = Get.put(RegisterController());
+    return Scaffold(
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(kDefaultPadding),
             child:  Column(
               children: [
                 const SizedBox(
-                  height: kDefaultPadding * 4,
+                  height: kDefaultPadding,
                 ),
                 const FormHeaderWidget(
                   image: kSplashImage,
                   title: kForgotPassword,
                   subTitle: kForgetPhoneSubTitle,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  image_height: 0.25,
-                  heightBetween: 30.0,
+                  image_height: 0.35,
+                  heightBetween: 10.0,
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(
@@ -40,7 +40,7 @@ class ForgotPasswordPhoneScreen extends StatelessWidget{
                           style: const TextStyle(
                             color: kContentColorTheme
                           ),
-                          controller : controller,
+                          controller : controller.phone_number,
                           decoration: const InputDecoration(
                             prefixIcon: Icon(Icons.numbers,color: kContentColorTheme,),
                             labelText: kRegisterPhone,
@@ -69,7 +69,8 @@ class ForgotPasswordPhoneScreen extends StatelessWidget{
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: (){
-                              var content = controller.text;
+                              var content = controller.phone_number.text.trim();
+                              RegisterController.instance.authenticatePhone(content);
                               Get.to(()=> OTPScreen(), arguments: [content]);
                             },
                             style: ElevatedButton.styleFrom(
@@ -96,8 +97,7 @@ class ForgotPasswordPhoneScreen extends StatelessWidget{
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 
 }

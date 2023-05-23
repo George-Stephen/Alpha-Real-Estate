@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "693855062171-kc6ttlur5poiobuv5hniq6p9rod0d94g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.infinity.alpha_estates",
+            "certificate_hash": "d96715a484ce0300638c442ed037e4ecc9f48e91"
+          }
+        },
+        {
           "client_id": "693855062171-69hvssrj5s8t6bjekf8hjmu1mm17umbn.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "693855062171-69hvssrj5s8t6bjekf8hjmu1mm17umbn.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "693855062171-mqpi9uajrp2i1ould5697jopmrc4nvgd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.infinity.alphaEstates"
+              }
             }
           ]
         }

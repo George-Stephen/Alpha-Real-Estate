@@ -11,23 +11,22 @@ class ForgotPasswordMailScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(kDefaultPadding),
             child:  Column(
               children: [
                 const SizedBox(
-                        height: kDefaultPadding * 4,
+                        height: kDefaultPadding,
                     ),
                 const FormHeaderWidget(
                          image: kSplashImage,
                          title: kForgotPassword,
                          subTitle: kForgetMailSubTitle,
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          image_height: 0.25,
-                          heightBetween: 30.0,
+                          image_height: 0.35,
+                          heightBetween: 10.0,
                           textAlign: TextAlign.center,
                    ),
                 const SizedBox(
@@ -95,8 +94,7 @@ class ForgotPasswordMailScreen extends StatelessWidget{
             ),
           ),
         ),
-      ),
-    );
+      );
   }
   
 }

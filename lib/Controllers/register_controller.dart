@@ -13,7 +13,13 @@ class RegisterController extends GetxController{
 
   // called from the view
   void registerUser(String emailAddress, String password){
-      AuthenticationRepository.instance.createUserWithEmailAndPassword(emailAddress, password);
+      String? error = AuthenticationRepository.instance.createUserWithEmailAndPassword(emailAddress, password) as String?;
+      if (error != null){
+        Get.showSnackbar(GetSnackBar(message: error.toString()));
+      }
   }
 
+  void authenticatePhone(String phone){
+    AuthenticationRepository.instance.phoneAuthentication(phone);
+  }
 }

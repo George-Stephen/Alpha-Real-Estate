@@ -13,6 +13,7 @@ class AuthenticationRepository extends GetxController{
   //variables
   final _auth = FirebaseAuth.instance;
   late final Rx<User?> firebaseUser;
+  var verificationId = ''.obs;
 
   @override
   void onReady() {
@@ -21,13 +22,46 @@ class AuthenticationRepository extends GetxController{
     ever(firebaseUser, _setInitialScreen);
   }
   _setInitialScreen(User? user) {
-    user == null? Get.offAll(() => const WelcomeScreen()): Get.offAll(() => DashboardPage());
+    user == null? Get.offAll(() => SplashScreen()): Get.offAll(() => DashboardPage());
+  }
+
+  Future<void> phoneAuthentication(String phone)async {
+    _auth.verifyPhoneNumber(
+        phoneNumber: phone,
+        verificationCompleted: (credential) async {
+          await _auth.signInWithCredential(credential);
+        },
+        codeSent: (verificationId, resentToken){
+          this.verificationId.value = verificationId;
+
+        },
+        codeAutoRetrievalTimeout: (verificationId){
+          this.verificationId.value = verificationId;
+        },
+        verificationFailed: (e){
+          if(e.code == "invalid phone number"){
+            Get.snackbar("Error", "Your phone number is not valid");
+          }else{
+            Get.snackbar("Error", "Something went wrong, please try again");
+          }
+        },
+    );
+  }
+
+  Future<bool> verifyOTP(String otp) async{
+      var credentials = await _auth.signInWithCredential(
+          PhoneAuthProvider.credential(
+            verificationId: verificationId.value,
+            smsCode: otp
+        )
+      );
+      return credentials.user != null ? true : false;
   }
 
   Future<void> createUserWithEmailAndPassword(String emailAddress, String password) async {
     try{
       await _auth.createUserWithEmailAndPassword(email: emailAddress, password: password);
-      firebaseUser.value != null ? Get.offAll(() => DashboardPage()) : Get.offAll(() => SplashScreen());
+      firebaseUser.value != null ? Get.offAll(() => DashboardPage()) : Get.offAll(() => const WelcomeScreen());
     } on FirebaseAuthException catch(e){
       final ex = RegistrationFailure.code(e.code);
       if (kDebugMode) {

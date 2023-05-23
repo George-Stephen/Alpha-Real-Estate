@@ -14,8 +14,7 @@ class LoginScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.all(kDefaultPadding),
@@ -29,8 +28,7 @@ class LoginScreen extends StatelessWidget{
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
 

@@ -2,6 +2,8 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Controllers/register_controller.dart';
+import 'package:alpha_estates/Screens/Authentication/ForgotPassword/Confirmation_OTP/OTPScreen.dart';
+import 'package:alpha_estates/Screens/Dashboard/DashboardPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -145,6 +147,9 @@ class RegisterForm extends StatelessWidget {
                 onPressed: (){
                   if(_formKey.currentState!.validate()){
                     RegisterController.instance.registerUser(controller.email_address.text.trim(), controller.password.text.trim());
+                    // RegisterController.instance.authenticatePhone(controller.phone_number.text.trim());
+                    // var content = controller.phone_number.text.trim();
+                    Get.to(()=> DashboardPage());
                   }
                 },
                 style: ElevatedButton.styleFrom(
