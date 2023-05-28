@@ -2,6 +2,7 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
+import 'package:alpha_estates/repository/authentication_repository/auth_repository.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -254,7 +255,9 @@ class UpdateProfileScreen extends StatelessWidget{
                             ),
                             Expanded(
                               child: ElevatedButton(
-                                  onPressed: (){},
+                                  onPressed: (){
+                                    AuthenticationRepository.instance.delete_account();
+                                  },
                                   style: ElevatedButton.styleFrom(
                                       elevation: 0,
                                       shape: RoundedRectangleBorder(

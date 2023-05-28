@@ -93,4 +93,6 @@ class AuthenticationRepository extends GetxController{
     }
   }
   Future<void> logout()async => await _auth.signOut();
+
+  Future<void> delete_account() async => await _auth.currentUser!.delete();
 }
