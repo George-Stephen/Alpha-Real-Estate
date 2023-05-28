@@ -62,7 +62,7 @@ class HomeCarouselWidget extends StatelessWidget {
                     child: Container(
                         padding: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
-                            color: Colors.transparent.withOpacity(0.3),
+                            color: Colors.transparent.withOpacity(0.5),
                             borderRadius: const BorderRadius.all(Radius.circular(15.0))
                         ),
                         child: Row(

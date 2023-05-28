@@ -27,6 +27,7 @@ dependencies:
   readmore: ^2.2.0
   auto_size_text: ^3.0.0
   floating_bottom_bar: ^0.0.2
+  line_awesome_flutter: ^2.0.0
 
 flutter_launcher_icons:
   image_path: "icons/AppIcon.png"
@@ -44,6 +45,7 @@ flutter:
     - assets/map_style.json
     - icons/
     - images/
+    - images/profile/
     - logo/
   fonts:
     - family: LeonSans

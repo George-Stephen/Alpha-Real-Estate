@@ -52,3 +52,9 @@ const String kHome = "Home";
 const String kSearch = "Search";
 const String kFavourites = "Wishlist";
 const String kProfile = "Profile";
+
+const String kProfileName = "George Stephen Wangui";
+const String kProfileEmail = "georgesteve561@gmail.com";
+const String kEditProfile = "Edit profile";
+const String kLogout = "Log out";
+const String kDeleteAccount = "Delete account";

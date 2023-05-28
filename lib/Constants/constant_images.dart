@@ -6,3 +6,4 @@ const kGoogleLogo = "logo/Google.png";
 const kSplashImage = "icons/SplashIcon.png";
 const kSplashBackGroundImage = "images/SplashScreenImage.png";
 const kForgotPasswordImage ="images/ForgotPassword.png";
+const kProfileImage ="images/profile/profile.jpg";
