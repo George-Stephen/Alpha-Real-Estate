@@ -5,6 +5,7 @@ import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Models/Home_model.dart';
 import 'package:alpha_estates/Screens/Update%20profile/Update_profile.dart';
 import 'package:alpha_estates/Widgets/Dashboard_widgets/CarouselWidgets/profile_collection_widget.dart';
+import 'package:alpha_estates/repository/authentication_repository/auth_repository.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -278,58 +279,26 @@ class ProfileWidget extends StatelessWidget{
               const SizedBox(
                 height: 20,
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
-                decoration: BoxDecoration(
-                    border: Border.all(color: kContentColorTheme.withOpacity(0.5), width: 1.0),
-                    borderRadius: const BorderRadius.all(Radius.circular(20.0)
-                    )
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: OutlinedButton(
-                            onPressed: (){},
-                            style: OutlinedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                    side: const BorderSide(width: 5.0,color: kContentColorTheme)
-                                ),
-                                padding: const EdgeInsets.symmetric(vertical: kButtonHeight)
-                            ),
-                            child: Text(kLogout.toUpperCase(), style: const TextStyle(
-                              color: kContentColorTheme,
-                            ),)
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 10.0,
-                      ),
-                      Expanded(
-                        child: ElevatedButton(
-                            onPressed: (){},
-                            style: ElevatedButton.styleFrom(
-                                elevation: 0,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                    side: const BorderSide(color: kContentColorTheme)
-                                ),
-                                backgroundColor: kContentColorTheme,
-                                padding: const EdgeInsets.symmetric(vertical: kButtonHeight)
-                            ),
-                            child: Text(kDeleteAccount.toUpperCase(),
-                              style: const TextStyle(
-                                  color: kBackgroundColor
-                              ),
-                            )
-                        ),
-                      ),
-                    ],
+                child: ElevatedButton(
+                  onPressed: (){
+                    AuthenticationRepository.instance.logout();
+                  },
+                  style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      shape: const StadiumBorder(),
+                      backgroundColor: kContentColorTheme,
+                      padding: const EdgeInsets.symmetric(vertical: kButtonHeight)
+                  ),
+                  child: Text(
+                    kLogout.toUpperCase(),
+                    style: const TextStyle(
+                        color: kBackgroundColor
+                    ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

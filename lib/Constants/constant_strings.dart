@@ -25,6 +25,7 @@ const String kRegisterTitle = "Hello There";
 const String kRegisterName = "Full name";
 const String kEmail = "Email address";
 const String kRegisterPhone = "Phone number";
+const String kDescription = "About me";
 const String kPassword ="Password";
 
 // forgot password
@@ -36,6 +37,9 @@ const String kResetViaPhone = "Reset Via Phone Number";
 // -- Forget Password Via Phone - Text
 const String kForgetPhoneSubTitle = "Enter your Phone Number to receive confirmation code";
 const String kSendConfirmation = "Send Code";
+
+const String kJoined = "Joined on ";
+const String kJoinedOn = "28 May 2022";
 
 // -- Forget Password Via E-Mail - Text
 const String kForgetMailSubTitle = "Enter your Email Address to receive confirmation code";

@@ -130,7 +130,6 @@ class _HomeState extends State<HomeWidget>{
             width: 40,
             child: OutlinedButton(
             onPressed: (){
-              AuthenticationRepository.instance.logout();
             },
             style: OutlinedButton.styleFrom(
             shape: const RoundedRectangleBorder(
