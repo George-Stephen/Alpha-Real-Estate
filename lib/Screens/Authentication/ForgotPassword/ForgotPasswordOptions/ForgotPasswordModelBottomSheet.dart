@@ -4,7 +4,6 @@ import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Screens/Authentication/ForgotPassword/ForgotPasswordOptions/ForgotPasswordWidget.dart';
 import 'package:alpha_estates/Screens/Authentication/ForgotPassword/UsingEmail/ForgotPasswordMail.dart';
 import 'package:alpha_estates/Screens/Authentication/ForgotPassword/UsingPhone/ForgotPasswordPhone.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,8 +22,8 @@ class ForgotPasswordScreen{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(kForgetPasswordTitle, style: Theme.of(context).textTheme.headline5,),
-            Text(kForgetPasswordSubTitle, style: Theme.of(context).textTheme.bodyText2,),
+            Text(kForgetPasswordTitle, style: Theme.of(context).textTheme.headlineSmall,),
+            Text(kForgetPasswordSubTitle, style: Theme.of(context).textTheme.bodyMedium,),
             const SizedBox(
               height: 30.0,
             ),
@@ -34,7 +33,7 @@ class ForgotPasswordScreen{
               subTitle: kResetViaEMail,
               onTap: () {
                 Navigator.pop(context);
-                Get.to(() => ForgotPasswordMailScreen());
+                Get.to(() => const ForgotPasswordMailScreen());
               },
             ),
             const SizedBox(
@@ -46,7 +45,7 @@ class ForgotPasswordScreen{
               subTitle: kResetViaPhone,
               onTap: () {
                 Navigator.pop(context);
-                Get.to(() => ForgotPasswordPhoneScreen());
+                Get.to(() => const ForgotPasswordPhoneScreen());
               },
             ),
           ],

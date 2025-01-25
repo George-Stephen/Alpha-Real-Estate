@@ -2,11 +2,12 @@ import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedController.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedFadeInWidget.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedModel.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SplashScreen extends StatelessWidget{
+  const SplashScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(AnimatedController());

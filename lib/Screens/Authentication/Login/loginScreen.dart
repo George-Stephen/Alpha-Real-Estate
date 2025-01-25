@@ -1,11 +1,7 @@
-import 'package:alpha_estates/Constants/constant_colors.dart';
-import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
-import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Widgets/Login/LoginFooter.dart';
 import 'package:alpha_estates/Widgets/Login/LoginForm.dart';
 import 'package:alpha_estates/Widgets/Login/LoginHeader.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget{

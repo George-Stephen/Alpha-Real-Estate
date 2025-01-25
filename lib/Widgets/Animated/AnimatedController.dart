@@ -1,5 +1,4 @@
 import 'package:alpha_estates/Screens/Onboarding/OnBoardingScreen.dart';
-import 'package:alpha_estates/Screens/Welcome/welcome_screen.dart';
 import 'package:get/get.dart';
 
 class AnimatedController extends GetxController{
@@ -12,7 +11,7 @@ class AnimatedController extends GetxController{
     await Future.delayed(const Duration(milliseconds: 3000));
     animate.value = false;
     await Future.delayed(const Duration(milliseconds: 2000));
-    Get.offAll(() => OnBoardingScreen());
+    Get.offAll(() => const OnBoardingScreen());
   }
 
   Future startAnimation() async {

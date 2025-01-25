@@ -9,7 +9,6 @@ import 'package:alpha_estates/repository/authentication_repository/auth_reposito
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class ProfileWidget extends StatelessWidget{
   List<Home> homes = [
@@ -94,13 +93,15 @@ class ProfileWidget extends StatelessWidget{
         property_size: "132"
     ),
   ];
+
+  ProfileWidget({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kBackgroundColor,
         leading: IconButton(onPressed: (){},icon: const Icon(CupertinoIcons.info),),
-        title: Text(kProfile, style: Theme.of(context).textTheme.headline5,),
+        title: Text(kProfile, style: Theme.of(context).textTheme.headlineSmall,),
         centerTitle: true,
         actions: [
           IconButton(onPressed: (){}, icon: const Icon(Icons.more_vert))
@@ -192,7 +193,7 @@ class ProfileWidget extends StatelessWidget{
                             SizedBox(
                               width: double.infinity,
                               child: ElevatedButton(
-                                onPressed: () => Get.to(()=> UpdateProfileScreen()),
+                                onPressed: () => Get.to(()=> const UpdateProfileScreen()),
                                 style: ElevatedButton.styleFrom(
                                     elevation: 0,
                                     shape: RoundedRectangleBorder(
@@ -232,12 +233,12 @@ class ProfileWidget extends StatelessWidget{
                   child: Text.rich(
                     TextSpan(
                         text: "About me: ",
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         children: [
                           TextSpan(
                             text: "I'm a young bachelor looking for a home in the suburbs. Just a single 2 bedroom apartment close to the main road and unlimited "
                                 "access to both internet connection as well as water and electricity",
-                            style: Theme.of(context).textTheme.bodyText1
+                            style: Theme.of(context).textTheme.bodyLarge
                           )
                         ]
                     ),
@@ -258,7 +259,7 @@ class ProfileWidget extends StatelessWidget{
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Text("My collection", style:Theme.of(context).textTheme.headline6,),
+                        Text("My collection", style:Theme.of(context).textTheme.titleLarge,),
                         GridView.count(
                             crossAxisCount: 1,
                             crossAxisSpacing: 10.0,

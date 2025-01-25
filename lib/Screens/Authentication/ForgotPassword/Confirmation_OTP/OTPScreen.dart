@@ -2,8 +2,6 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Controllers/OTP_controller.dart';
-import 'package:alpha_estates/Screens/Dashboard/DashboardPage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
@@ -11,9 +9,11 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OTPScreen extends StatelessWidget{
+  const OTPScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    var data_1;
+    String data_1 = '';
     OTPController controller = Get.put(OTPController());
     var data = Get.arguments;
     return Scaffold(
@@ -27,7 +27,7 @@ class OTPScreen extends StatelessWidget{
                 fontSize: 80.0
               ),
             ),
-            Text(kOTPSubtitle.toUpperCase(), style: Theme.of(context).textTheme.headline6,),
+            Text(kOTPSubtitle.toUpperCase(), style: Theme.of(context).textTheme.titleLarge,),
             const SizedBox(
               height: 40.0,
             ),

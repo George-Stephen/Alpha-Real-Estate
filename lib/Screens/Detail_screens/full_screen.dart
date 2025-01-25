@@ -1,9 +1,10 @@
 import 'package:alpha_estates/Constants/constant_sizes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ImageFullScreen extends StatelessWidget{
+  const ImageFullScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     var data = Get.arguments;

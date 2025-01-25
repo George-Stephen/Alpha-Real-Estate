@@ -1,5 +1,4 @@
 import 'package:alpha_estates/Models/Home_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class profile_collection_widget extends StatelessWidget {
@@ -46,7 +45,7 @@ class profile_collection_widget extends StatelessWidget {
                               Text(
                                 home.title,
                                 textAlign: TextAlign.justify,
-                                style: Theme.of(context).textTheme.headline5,
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                               const SizedBox(
                                 height: 5.0,
@@ -54,7 +53,7 @@ class profile_collection_widget extends StatelessWidget {
                               Text(
                                 home.location,
                                 textAlign: TextAlign.justify,
-                                style: Theme.of(context).textTheme.bodyText2,
+                                style: Theme.of(context).textTheme.bodyMedium,
                               )
                             ],
                           ),

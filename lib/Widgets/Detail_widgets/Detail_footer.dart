@@ -2,13 +2,11 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Models/Home_model.dart';
-import 'package:alpha_estates/Screens/Detail_screens/Home_detail.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Detail_footer extends StatelessWidget {
-   Detail_footer({
+   const Detail_footer({
     super.key,
     required this.home,
   });
@@ -35,11 +33,11 @@ class Detail_footer extends StatelessWidget {
                 child: Text.rich(
                     TextSpan(
                         text: home.price,
-                        style: Theme.of(context).textTheme.headline5,
+                        style: Theme.of(context).textTheme.headlineSmall,
                         children: [
                           TextSpan(
                             text: " /Month",
-                            style: Theme.of(context).textTheme.bodyText2,
+                            style: Theme.of(context).textTheme.bodyMedium,
                           )
                         ]
                     )

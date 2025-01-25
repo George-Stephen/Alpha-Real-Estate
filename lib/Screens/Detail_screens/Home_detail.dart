@@ -1,11 +1,9 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Models/Home_model.dart';
-import 'package:alpha_estates/Screens/Detail_screens/Home_detail.dart';
 import 'package:alpha_estates/Screens/Detail_screens/full_screen.dart';
 import 'package:alpha_estates/Widgets/Detail_widgets/Detail_footer.dart';
 import 'package:alpha_estates/Widgets/Detail_widgets/detail_header.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:readmore/readmore.dart';
@@ -37,7 +35,7 @@ class _homedetailState extends State<HomeDetailScreen>{
               child: Container(
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,7 +59,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                         ReadMoreText(
                           widget.home.description,
                           trimLines: 2,
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.bodyLarge,
                           trimMode: TrimMode.Line,
                           trimCollapsedText: "Expand",
                           trimExpandedText: "Collapse",
@@ -342,7 +340,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                         const SizedBox(
                           height: 20.0,
                         ),
-                        Container(
+                        SizedBox(
                           height: 400,
                           width: double.infinity,
                           child: ClipRRect(
@@ -403,7 +401,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                             width: 40,
                                             child: OutlinedButton(
                                               onPressed: (){
-                                                Get.to(()=> ImageFullScreen(), arguments: [widget.home.bed_imageUrl]);
+                                                Get.to(()=> const ImageFullScreen(), arguments: [widget.home.bed_imageUrl]);
                                               },
                                               style: OutlinedButton.styleFrom(
                                                   shape: const RoundedRectangleBorder(
@@ -440,7 +438,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                                     Text(
                                                       "Bedroom",
                                                       textAlign: TextAlign.justify,
-                                                      style: Theme.of(context).textTheme.headline5,
+                                                      style: Theme.of(context).textTheme.headlineSmall,
                                                     ),
                                                   ],
                                                 )
@@ -478,7 +476,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                             width: 40,
                                             child: OutlinedButton(
                                               onPressed: (){
-                                                Get.to(()=> ImageFullScreen(), arguments: [widget.home.bath_imageUrl]);
+                                                Get.to(()=> const ImageFullScreen(), arguments: [widget.home.bath_imageUrl]);
                                               },
                                               style: OutlinedButton.styleFrom(
                                                   shape: const RoundedRectangleBorder(
@@ -515,7 +513,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                                     Text(
                                                       "Bathroom ",
                                                       textAlign: TextAlign.justify,
-                                                      style: Theme.of(context).textTheme.headline5,
+                                                      style: Theme.of(context).textTheme.headlineSmall,
                                                     ),
                                                   ],
                                                 )
@@ -553,7 +551,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                             width: 40,
                                             child: OutlinedButton(
                                               onPressed: (){
-                                                Get.to(()=> ImageFullScreen(), arguments: [widget.home.kitchen_imageUrl]);
+                                                Get.to(()=> const ImageFullScreen(), arguments: [widget.home.kitchen_imageUrl]);
                                               },
                                               style: OutlinedButton.styleFrom(
                                                   shape: const RoundedRectangleBorder(
@@ -590,7 +588,7 @@ class _homedetailState extends State<HomeDetailScreen>{
                                                     Text(
                                                       "Kitchen ",
                                                       textAlign: TextAlign.justify,
-                                                      style: Theme.of(context).textTheme.headline5,
+                                                      style: Theme.of(context).textTheme.headlineSmall,
                                                     ),
                                                   ],
                                                 )

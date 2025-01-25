@@ -8,13 +8,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ForgotPasswordMailScreen extends StatelessWidget{
+  const ForgotPasswordMailScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
     return Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.all(kDefaultPadding),
+            padding: const EdgeInsets.all(kDefaultPadding),
             child:  Column(
               children: [
                 const SizedBox(
@@ -68,7 +70,7 @@ class ForgotPasswordMailScreen extends StatelessWidget{
                           child: ElevatedButton(
                             onPressed: (){
                               var content = controller.text;
-                              Get.to(()=> OTPScreen(), arguments: [content]);
+                              Get.to(()=> const OTPScreen(), arguments: [content]);
                             },
                             style: ElevatedButton.styleFrom(
                                 elevation: 0,

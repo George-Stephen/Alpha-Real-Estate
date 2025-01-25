@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SearchWidget extends StatefulWidget{
+  const SearchWidget({super.key});
+
   @override
   _searchState createState() => _searchState();
 
@@ -53,7 +55,7 @@ class _searchState extends State<SearchWidget>{
         property_size: "132"
     ),
   ];
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -76,7 +78,7 @@ class _searchState extends State<SearchWidget>{
         Center(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 150,
                 ),
                 SizedBox(

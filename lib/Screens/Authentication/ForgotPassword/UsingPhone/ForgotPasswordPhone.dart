@@ -9,13 +9,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ForgotPasswordPhoneScreen extends StatelessWidget{
+  const ForgotPasswordPhoneScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(RegisterController());
     return Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.all(kDefaultPadding),
+            padding: const EdgeInsets.all(kDefaultPadding),
             child:  Column(
               children: [
                 const SizedBox(
@@ -71,7 +73,7 @@ class ForgotPasswordPhoneScreen extends StatelessWidget{
                             onPressed: (){
                               var content = controller.phone_number.text.trim();
                               RegisterController.instance.authenticatePhone(content);
-                              Get.to(()=> OTPScreen(), arguments: [content]);
+                              Get.to(()=> const OTPScreen(), arguments: [content]);
                             },
                             style: ElevatedButton.styleFrom(
                                 elevation: 0,

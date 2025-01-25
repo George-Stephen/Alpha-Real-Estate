@@ -3,8 +3,6 @@ import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Models/Home_model.dart';
 import 'package:alpha_estates/Screens/Detail_screens/Home_detail.dart';
 import 'package:alpha_estates/Widgets/Dashboard_widgets/CarouselWidgets/HomeCarouselWidget.dart';
-import 'package:alpha_estates/repository/authentication_repository/auth_repository.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,11 +19,11 @@ class _HomeState extends State<HomeWidget>{
 
   List<DropdownMenuItem<String>> get dropdownItems{
     List<DropdownMenuItem<String>> menuItems = [
-      DropdownMenuItem(child: Text("Location"),value: "Location"),
-      DropdownMenuItem(child: Text("USA"),value: "USA"),
-      DropdownMenuItem(child: Text("Canada"),value: "Canada"),
-      DropdownMenuItem(child: Text("Brazil"),value: "Brazil"),
-      DropdownMenuItem(child: Text("England"),value: "England"),
+      const DropdownMenuItem(value: "Location", child: Text("Location")),
+      const DropdownMenuItem(value: "USA", child: Text("USA")),
+      const DropdownMenuItem(value: "Canada", child: Text("Canada")),
+      const DropdownMenuItem(value: "Brazil", child: Text("Brazil")),
+      const DropdownMenuItem(value: "England", child: Text("England")),
     ];
     return menuItems;
   }
@@ -94,7 +92,7 @@ class _HomeState extends State<HomeWidget>{
                       value: selected_value,
                       icon: const Icon(Icons.keyboard_arrow_down,color:kContentColorTheme,),
                       dropdownColor: kBackgroundColor,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       items: dropdownItems,
                       onChanged: (String? value) {
                         selected_value = value!;
@@ -147,7 +145,7 @@ class _HomeState extends State<HomeWidget>{
         Center(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 150,
               ),
               SizedBox(

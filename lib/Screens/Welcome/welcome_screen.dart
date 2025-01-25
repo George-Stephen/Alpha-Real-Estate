@@ -7,10 +7,8 @@ import 'package:alpha_estates/Screens/Authentication/Register/RegisterScreen.dar
 import 'package:alpha_estates/Widgets/Animated/AnimatedController.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedFadeInWidget.dart';
 import 'package:alpha_estates/Widgets/Animated/AnimatedModel.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class WelcomeScreen extends StatelessWidget{
   const WelcomeScreen({super.key});
@@ -43,11 +41,11 @@ class WelcomeScreen extends StatelessWidget{
                      Image(image: const AssetImage(kSplashImage), height: size.height * 0.4,),
                      Column(
                         children: [
-                          Text(WelcomeTitle, style: Theme.of(context).textTheme.headline4,),
+                          Text(WelcomeTitle, style: Theme.of(context).textTheme.headlineMedium,),
                           const SizedBox(
                             height: 3.0,
                           ),
-                          Text(WelcomeSubTitle, style: Theme.of(context).textTheme.bodyText1,textAlign: TextAlign.center,),
+                          Text(WelcomeSubTitle, style: Theme.of(context).textTheme.bodyLarge,textAlign: TextAlign.center,),
                         ],
                     ),
                     Row(

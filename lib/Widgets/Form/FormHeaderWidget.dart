@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FormHeaderWidget extends StatelessWidget {
@@ -31,8 +30,8 @@ class FormHeaderWidget extends StatelessWidget {
       children: [
         Image(image: AssetImage(image),color: image_color,height: size.height * image_height,),
         SizedBox( height:  heightBetween,),
-        Text(title, style: Theme.of(context).textTheme.headline4,),
-        Text(subTitle,style: Theme.of(context).textTheme.bodyText2, textAlign: textAlign,),
+        Text(title, style: Theme.of(context).textTheme.headlineMedium,),
+        Text(subTitle,style: Theme.of(context).textTheme.bodyMedium, textAlign: textAlign,),
       ],
     );
   }

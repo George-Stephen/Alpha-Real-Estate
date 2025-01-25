@@ -1,7 +1,6 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Models/Home_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeCarouselWidget extends StatelessWidget {
@@ -74,7 +73,7 @@ class HomeCarouselWidget extends StatelessWidget {
                                 Text(
                                   home.title,
                                   textAlign: TextAlign.justify,
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style: Theme.of(context).textTheme.headlineSmall,
                                 ),
                                 const SizedBox(
                                   height: 5.0,
@@ -82,11 +81,11 @@ class HomeCarouselWidget extends StatelessWidget {
                                 Text(
                                   home.location,
                                   textAlign: TextAlign.justify,
-                                  style: Theme.of(context).textTheme.bodyText2,
+                                  style: Theme.of(context).textTheme.bodyMedium,
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 70,
                             ),
                             Column(

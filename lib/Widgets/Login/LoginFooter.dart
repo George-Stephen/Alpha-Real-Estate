@@ -3,10 +3,8 @@ import 'package:alpha_estates/Constants/constant_images.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Screens/Authentication/Register/RegisterScreen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class LoginFooter extends StatelessWidget {
   const LoginFooter({
@@ -36,7 +34,7 @@ class LoginFooter extends StatelessWidget {
             ),
             label: Text(
                 kLoginWithGoogle.toUpperCase(),
-                style: TextStyle(color: kContentColorTheme,)
+                style: const TextStyle(color: kContentColorTheme,)
             ),
           ),
         ),
@@ -48,7 +46,7 @@ class LoginFooter extends StatelessWidget {
           child: Text.rich(
             TextSpan(
                 text: kRegisterText,
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
                 children: const [
                   TextSpan(
                     text: RegisterButton,

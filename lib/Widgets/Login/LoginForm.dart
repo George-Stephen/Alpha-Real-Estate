@@ -3,7 +3,6 @@ import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Controllers/login_controller.dart';
 import 'package:alpha_estates/Screens/Authentication/ForgotPassword/ForgotPasswordOptions/ForgotPasswordModelBottomSheet.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -16,9 +15,9 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     return Form(
-        key: _formKey,
+        key: formKey,
         child: Container(
           padding:  const EdgeInsets.symmetric(vertical: kFormHeight-10),
           child: Column(
@@ -94,14 +93,14 @@ class LoginForm extends StatelessWidget {
                     onPressed: (){
                       ForgotPasswordScreen.buildShowModalBottomSheet(context);
                     },
-                    child: Text(kForgotPassword,style: Theme.of(context).textTheme.bodyText2,)
+                    child: Text(kForgotPassword,style: Theme.of(context).textTheme.bodyMedium,)
                 ),
               ),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: (){
-                    if(_formKey.currentState!.validate()){
+                    if(formKey.currentState!.validate()){
                       LoginController.instance.Login(controller.email_address.text.trim(), controller.password.text.trim());
                     }
                   },

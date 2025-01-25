@@ -9,6 +9,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class UpdateProfileScreen extends StatelessWidget{
+  const UpdateProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,7 @@ class UpdateProfileScreen extends StatelessWidget{
           },
           icon: const Icon(Icons.arrow_back_ios_new_sharp, size: 17,),
         ),
-        title: Text(kEditProfile, style: Theme.of(context).textTheme.headline5,),
+        title: Text(kEditProfile, style: Theme.of(context).textTheme.headlineSmall,),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

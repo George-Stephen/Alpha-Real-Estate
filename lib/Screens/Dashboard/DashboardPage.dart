@@ -6,17 +6,18 @@ import 'package:alpha_estates/Widgets/Dashboard_widgets/Home_widget.dart';
 import 'package:alpha_estates/Widgets/Dashboard_widgets/Profile_widget.dart';
 import 'package:alpha_estates/Widgets/Dashboard_widgets/Search_widget.dart';
 import 'package:floating_bottom_bar/animated_bottom_navigation_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatefulWidget{
+  const DashboardPage({super.key});
+
   @override
   _dashboardState createState() => _dashboardState();
 }
 
 
 class _dashboardState extends State<DashboardPage>{
-  static final List<Widget> _PageOptions = <Widget> [SearchWidget(),HomeWidget(),FavouritesWidget(),ProfileWidget()];
+  static final List<Widget> _PageOptions = <Widget> [const SearchWidget(),const HomeWidget(),const FavouritesWidget(),ProfileWidget()];
   int _selectedIndex = 1;
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,6 @@ class _dashboardState extends State<DashboardPage>{
             floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
             bottomNavigationBar: AnimatedBottomNavigationBar(
               barColor: kContentColorTheme,
-
               controller: FloatingBottomBarController(initialIndex: 1),
               bottomBarCenterModel:  BottomBarCenterModel(
                   centerBackgroundColor: kContentColorTheme,

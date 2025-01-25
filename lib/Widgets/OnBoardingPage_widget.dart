@@ -1,9 +1,7 @@
 import 'package:alpha_estates/Constants/constant_sizes.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Constants/constant_colors.dart';
-import '../Constants/constant_images.dart';
 import '../Screens/Onboarding/OnBoardingModel.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -28,7 +26,7 @@ class OnBoardingPage extends StatelessWidget {
           Column(
             children: [
               Text(model.Title,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               Text(model.SubTitle,
                 textAlign: TextAlign.center,

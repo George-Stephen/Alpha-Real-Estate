@@ -1,5 +1,4 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
-import 'package:alpha_estates/Screens/Splashscreen/SplashScreen.dart';
 import 'package:alpha_estates/firebase_options.dart';
 import 'package:alpha_estates/repository/authentication_repository/auth_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -31,24 +30,24 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0xff333846),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: const TextTheme(
-          headline5: TextStyle(
+          headlineSmall: TextStyle(
               color: kContentColorTheme,
               fontSize: 25,
               fontWeight: FontWeight.w500,
           ),
-          headline6: TextStyle(
+          titleLarge: TextStyle(
             color: kContentColorTheme,
             fontWeight: FontWeight.w500,
           ),
-          headline4: TextStyle(
+          headlineMedium: TextStyle(
             color: kContentColorTheme,
             fontWeight: FontWeight.w500,
           ),
-          bodyText1: TextStyle(
+          bodyLarge: TextStyle(
             color: kContentColorTheme,
             fontWeight: FontWeight.normal,
           ),
-          bodyText2: TextStyle(
+          bodyMedium: TextStyle(
             color: kContentColorTheme,
             fontSize: 15,
             fontWeight: FontWeight.w500,

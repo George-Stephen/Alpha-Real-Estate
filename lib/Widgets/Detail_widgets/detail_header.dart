@@ -1,10 +1,8 @@
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Models/Home_model.dart';
 import 'package:alpha_estates/Screens/Detail_screens/full_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class Detail_header extends StatelessWidget {
   const Detail_header({
@@ -68,7 +66,7 @@ class Detail_header extends StatelessWidget {
                     width: 40,
                     child: OutlinedButton(
                       onPressed: (){
-                        Get.to(()=> ImageFullScreen(), arguments: [home.imageUrl]);
+                        Get.to(()=> const ImageFullScreen(), arguments: [home.imageUrl]);
                       },
                       style: OutlinedButton.styleFrom(
                           shape: const RoundedRectangleBorder(
@@ -105,15 +103,15 @@ class Detail_header extends StatelessWidget {
                             Text(
                               home.title,
                               textAlign: TextAlign.justify,
-                              style: Theme.of(context).textTheme.headline5,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5.0,
                             ),
                             Text(
                               home.location,
                               textAlign: TextAlign.justify,
-                              style: Theme.of(context).textTheme.bodyText2,
+                              style: Theme.of(context).textTheme.bodyMedium,
                             )
                           ],
                         )

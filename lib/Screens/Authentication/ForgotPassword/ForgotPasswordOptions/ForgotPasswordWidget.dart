@@ -1,5 +1,4 @@
 import 'package:alpha_estates/Constants/constant_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordWidget extends StatelessWidget {
@@ -31,8 +30,8 @@ class ForgotPasswordWidget extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: Theme.of(context).textTheme.headline5,),
-                Text(subTitle, style: Theme.of(context).textTheme.bodyText2,)
+                Text(title, style: Theme.of(context).textTheme.headlineSmall,),
+                Text(subTitle, style: Theme.of(context).textTheme.bodyMedium,)
               ],
             )
           ],

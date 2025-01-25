@@ -4,7 +4,6 @@ import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Screens/Authentication/Login/loginScreen.dart';
 import 'package:alpha_estates/Widgets/Form/FormHeaderWidget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:alpha_estates/Widgets/RegisterWidget/RegisterForm.dart';
 import 'package:get/get.dart';
@@ -17,16 +16,16 @@ class RegisterScreen extends StatelessWidget{
     return Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.all(kDefaultPadding),
+            padding: const EdgeInsets.all(kDefaultPadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                FormHeaderWidget(
+                const FormHeaderWidget(
                   image: kSplashImage,
                   title: kRegisterTitle,
                   subTitle: kLoginSubtitle,
                 ),
-                RegisterForm(),
+                const RegisterForm(),
                 Column(
                   children: [
                     const Text("OR"),
@@ -53,7 +52,7 @@ class RegisterScreen extends StatelessWidget{
                       child: Text.rich(
                         TextSpan(
                             text: kAlreadyhaveAnAccount,
-                            style: Theme.of(context).textTheme.bodyText1,
+                            style: Theme.of(context).textTheme.bodyLarge,
                             children: const [
                               TextSpan(
                                 text: LoginButton,

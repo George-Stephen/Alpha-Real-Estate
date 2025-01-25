@@ -2,9 +2,7 @@ import 'package:alpha_estates/Constants/constant_colors.dart';
 import 'package:alpha_estates/Constants/constant_sizes.dart';
 import 'package:alpha_estates/Constants/constant_strings.dart';
 import 'package:alpha_estates/Controllers/register_controller.dart';
-import 'package:alpha_estates/Screens/Authentication/ForgotPassword/Confirmation_OTP/OTPScreen.dart';
 import 'package:alpha_estates/Screens/Dashboard/DashboardPage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -17,11 +15,11 @@ class RegisterForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(RegisterController());
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     return Container(
       padding: const EdgeInsets.symmetric(vertical: kFormHeight -10),
       child: Form(
-        key: _formKey,
+        key: formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -145,11 +143,11 @@ class RegisterForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: (){
-                  if(_formKey.currentState!.validate()){
+                  if(formKey.currentState!.validate()){
                     RegisterController.instance.registerUser(controller.email_address.text.trim(), controller.password.text.trim());
                     // RegisterController.instance.authenticatePhone(controller.phone_number.text.trim());
                     // var content = controller.phone_number.text.trim();
-                    Get.to(()=> DashboardPage());
+                    Get.to(()=> const DashboardPage());
                   }
                 },
                 style: ElevatedButton.styleFrom(

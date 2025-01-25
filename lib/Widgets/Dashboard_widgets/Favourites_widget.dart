@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class FavouritesWidget extends StatefulWidget{
+  const FavouritesWidget({super.key});
+
   @override
   _favouriteState createState() => _favouriteState();
 
@@ -63,13 +65,13 @@ class _favouriteState extends State<FavouritesWidget>{
           left: 20,
           child: Text(
             "My Wishlist (${homes.length})",
-            style: Theme.of(context).textTheme.headline4,
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
         ),
         Center(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 150,
                 ),
                 SizedBox(
